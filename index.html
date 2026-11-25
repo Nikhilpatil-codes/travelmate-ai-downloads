@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelMate AI — Download Android APK</title>
+  <meta name="description" content="Download TravelMate AI: Karnataka Trip Planner with explainable 8-factor score matching.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #059669;
+      --primary-dark: #047857;
+      --primary-light: #d1fae5;
+      --primary-glow: rgba(5, 150, 105, 0.25);
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.85);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #10b981;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 48px;
+    }
+    .container {
+      max-width: 540px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero {
+      text-align: center;
+      padding: 32px 16px 16px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+    .logo-icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+      display: inline-block;
+      filter: drop-shadow(0 8px 16px var(--primary-glow));
+    }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #ffffff 40%, #a7f3d0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    }
+    .cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 18px 24px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px var(--primary-glow);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(5, 150, 105, 0.45);
+    }
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+    .meta-row {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .meta-item {
+      text-align: center;
+    }
+    .meta-val {
+      font-weight: 700;
+      color: #e2e8f0;
+      display: block;
+      margin-top: 2px;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+    }
+    .features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .features-list li span.icon {
+      color: var(--accent);
+      font-size: 1.1rem;
+      line-height: 1.2;
+    }
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-content {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+    .step-content strong {
+      color: #f1f5f9;
+    }
+    .alert-box {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 0.85rem;
+      color: #fbbf24;
+      line-height: 1.45;
+      display: flex;
+      gap: 10px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <div class="badge">Karnataka Travel AI</div>
+      <div class="logo-icon">🧭</div>
+      <h1>TravelMate AI</h1>
+      <p class="tagline">Intelligent trip planner with explainable 8-factor score matching across 40 curated destinations.</p>
+    </div>
+
+    <!-- Download Card -->
+    <div class="card">
+      <a class="cta-btn" href="https://github.com/Nikhilpatil-codes/travelmate-ai-downloads/releases/latest/download/TravelMate-AI-latest.apk">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+        </svg>
+        Download Android APK
+      </a>
+      <div class="meta-row">
+        <div class="meta-item">Version<span class="meta-val">v1.0.0 (Build 1)</span></div>
+        <div class="meta-item">Platform<span class="meta-val">Android 8.0+</span></div>
+        <div class="meta-item">Size<span class="meta-val">~65 KB</span></div>
+        <div class="meta-item">Build<span class="meta-val">Debug APK</span></div>
+      </div>
+    </div>
+
+    <!-- 8-Factor Intelligence Highlights -->
+    <div class="card">
+      <div class="section-title">✨ Key Features</div>
+      <ul class="features-list">
+        <li><span class="icon">🎯</span> <strong>Explainable 8-Factor Scoring:</strong> Budget, Proximity, Weather, Season, Crowd, Culture, Nature & Safety.</li>
+        <li><span class="icon">📍</span> <strong>40 Karnataka Escapes:</strong> Heritage, waterfalls, hill stations, beaches and spiritual retreats.</li>
+        <li><span class="icon">🗺️</span> <strong>Interactive Leaflet Map:</strong> Browse destinations with offline-ready OpenStreetMap tiles.</li>
+        <li><span class="icon">🧭</span> <strong>4-Step Plan Wizard:</strong> Dynamic cost estimation, itinerary timeline & WhatsApp sharing.</li>
+      </ul>
+    </div>
+
+    <!-- Installation Guide -->
+    <div class="card">
+      <div class="section-title">📱 Installation Instructions</div>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">Tap the <strong>Download Android APK</strong> button above to save <code>TravelMate-AI-latest.apk</code>.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">Open the downloaded file from your browser notification bar or Files app.</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">If prompted, tap <strong>Settings</strong> and switch on <strong>"Allow from this source"</strong> (Install unknown apps).</div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">Tap <strong>Install</strong>, then tap <strong>Open</strong> to launch TravelMate AI.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Debug Notice -->
+    <div class="alert-box">
+      <span>ℹ️</span>
+      <div>
+        <strong>Debug Build Notice:</strong> This presentation release is signed with an Android debug certificate. If Google Play Protect displays an "Unrecognized app" warning, tap <strong>More details</strong> &rarr; <strong>Install anyway</strong>.
+      </div>
+    </div>
+
+    <footer>
+      TravelMate AI &bull; Prepared for presentation &bull; <a href="https://github.com/Nikhilpatil-codes/travelmate-ai-downloads/releases">View GitHub Releases</a>
+    </footer>
+  </div>
+</body>
+</html>
